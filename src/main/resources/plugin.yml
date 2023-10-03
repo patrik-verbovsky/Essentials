@@ -1,0 +1,70 @@
+name: Essentials
+version: '1.0'
+main: me.patrikverbovsky.essentials.Essentials
+api-version: '1.20'
+description: Simple commands.
+commands:
+  tp:
+    description: Teleports players
+  tpall:
+    description: Teleports all of the players to you
+  gms:
+    description: Changes gamemode to Survival Mode
+  gmc:
+    description: Changes gamemode to Creative Mode
+  gma:
+    description: Changes gamemode to Adventure Mode
+  gmsp:
+    description: Changes gamemode to Spectator Mode
+  broadcast:
+    description: Broadcasts messages
+  fly:
+    description: Enables flying
+  disablefly:
+    description: Disables flying
+  heal:
+    description: Heals you
+permissions:
+  essentials.*:
+    description: Gives access for all commands
+    children:
+      essentials.tp: true
+      essentials.tpall: true
+      essentials.gms: true
+      essentials.gmc: true
+      essentials.gma: true
+      essentials.gmsp: true
+      essentials.broadcast: true
+      essentials.fly: true
+      essentials.disablefly: true
+      essentials.heal: true
+  essentials.tp:
+    description: Allows players to teleport
+    default: op
+  essentials.tpall:
+    description: Teleports all of the players to you
+    default: op
+  essentials.gms:
+    description: Allows to change gamemode to Survival Mode
+    default: op
+  essentials.gmc:
+    description: Allows to change gamemode to Creative Mode
+    default: op
+  essentials.gma:
+    description: Allows to change gamemode to Adventure Mode
+    default: op
+  essentials.gmsp:
+    description: Allows to change gamemode to Spectator Mode
+    default: op
+  essentials.broadcast:
+    description: Allows to broadcast messages
+    default: op
+  essentials.fly:
+    description: Allows enabling flying
+    default: op
+  essentials.disablefly:
+    description: Allows disabling flying
+    default: op
+  essentials.heal:
+    description: Allows healing
+    default: op
