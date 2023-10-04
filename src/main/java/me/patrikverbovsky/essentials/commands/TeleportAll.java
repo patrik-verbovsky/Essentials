@@ -14,13 +14,13 @@ public class TeleportAll implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("essentials.tpall")) {
                 if (Bukkit.getServer().getOnlinePlayers().size() == 1) {
-                    player.sendMessage(ChatColor.GREEN + "No other players are on the server right now.");
+                    player.sendMessage("No other players are on the server right now.");
                 } else if(Bukkit.getServer().getOnlinePlayers().size() > 1) {
                     int numOfPlayers = 0;
                     for(Player p : Bukkit.getServer().getOnlinePlayers()) {
                         p.teleport(player.getLocation());
                         numOfPlayers++;
-                    } player.sendMessage(ChatColor.YELLOW + "Teleported all " + (numOfPlayers - 1) + " players to you.");
+                    } player.sendMessage("Teleported " + (numOfPlayers - 1) + " players to you.");
                 }
             }
         } return true;

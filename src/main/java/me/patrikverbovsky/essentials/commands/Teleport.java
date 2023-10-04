@@ -14,15 +14,15 @@ public class Teleport implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("essentials.tp")) {
                 if (args.length == 0) {
-                    player.sendMessage(ChatColor.RED + "You need to enter some arguments.");
-                    player.sendMessage(ChatColor.YELLOW + "To teleport yourself: /tp <otherplayer>");
-                    player.sendMessage(ChatColor.YELLOW + "To teleport others: /tp <player> <otherplayer>");
-                } else if(args.length == 1) {
+                    player.sendMessage("You need to enter some arguments.");
+                    player.sendMessage("To teleport yourself: /tp <otherplayer>");
+                    player.sendMessage("To teleport others: /tp <player> <otherplayer>");
+                } else if (args.length == 1) {
                     Player target = Bukkit.getPlayer(args[0]);
                     try {
                         player.teleport(target.getLocation());
                     } catch (NullPointerException e) {
-                        player.sendMessage(ChatColor.RED + "Player not found.");
+                        player.sendMessage("Player not found.");
                     }
                 } else if(args.length == 2) {
                     Player playerToSend = Bukkit.getPlayer(args[0]);
@@ -30,7 +30,7 @@ public class Teleport implements CommandExecutor {
                     try {
                         playerToSend.teleport(target.getLocation());
                     } catch (NullPointerException e) {
-                        player.sendMessage(ChatColor.RED + "Player not found.");
+                        player.sendMessage("Player not found.");
                     }
                 }
             }

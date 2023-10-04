@@ -14,7 +14,7 @@ public class Survival implements CommandExecutor {
             if (player.hasPermission("essentials.gms")) {
                 player.setGameMode(GameMode.SURVIVAL);
                 player.sendMessage("Set gamemode to Survival Mode");
-            }
-        } return true;
+            } return true;
+        } return false;
     }
 }

@@ -14,10 +14,10 @@ public class Fly implements CommandExecutor {
             if (player.hasPermission("essentials.fly")) {
                 player.setAllowFlight(true);
                 player.setFlying(true);
-                player.sendMessage(ChatColor.YELLOW + "Set flying to Enabled");
+                player.sendMessage("Set flying to Enabled");
             }
         } else {
-            sender.sendMessage(ChatColor.RED + "You need to be a player to use this command.");
+            sender.sendMessage("You need to be a player to use this command.");
             return true;
         } return false;
     }

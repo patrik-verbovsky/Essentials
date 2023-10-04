@@ -13,7 +13,7 @@ public class DisableFly implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("essentials.disablefly")) {
                 player.setFlying(false);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aSet flying to &a&lDisabled"));
+                player.sendMessage("Set flying to Disabled");
             }
         } else {
             sender.sendMessage("You need to be a player to use this command.");

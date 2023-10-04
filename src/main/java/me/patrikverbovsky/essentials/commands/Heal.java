@@ -14,27 +14,27 @@ public class Heal implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("essentials.heal")) {
                 if (args.length == 0) {
-                    player.sendMessage(ChatColor.YELLOW + "You have been successfully healed!");
-                    player.setFoodLevel(20);
+                    player.sendMessage("You have been healed.");
                     player.setHealth(20);
+                    player.setFoodLevel(20);
                 } else if (args.length == 1) {
                     Player target = Bukkit.getPlayer(args[0]);
                     if (target != null) {
                         target.setHealth(20);
                         target.setFoodLevel(20);
-                        target.sendMessage(ChatColor.YELLOW + "You were healed!");
-                        player.sendMessage(ChatColor.YELLOW + "You healed the Player " + target.getPlayerListName());
+                        target.sendMessage("You have been healed.");
+                        player.sendMessage("You healed " + target);
                     } else {
-                        player.sendMessage(ChatColor.RED + "The player" + args[0] + " is not on the server!");
+                        player.sendMessage("The player " + args[0] + " is not on the server.");
                     }
                 } else {
-                    player.sendMessage(ChatColor.RED + "Please use /heal <player>!");
+                    player.sendMessage("Use /heal <player>.");
                 }
             } else {
-                player.sendMessage(ChatColor.RED + "I'm sorry, but you do not have the permission to perform this command.");
+                player.sendMessage( "You don't have the permission for this command.");
             }
         } else {
-            sender.sendMessage(ChatColor.RED + "You can only use this command as a player!");
+            sender.sendMessage("You can only use this command as a player.");
         } return false;
     }
 }
