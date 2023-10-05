@@ -23,7 +23,7 @@ public class Heal implements CommandExecutor {
                         target.setHealth(20);
                         target.setFoodLevel(20);
                         target.sendMessage("You have been healed.");
-                        player.sendMessage("You healed " + args[0]);
+                        player.sendMessage("You healed " + args[0] + ".");
                     } else {
                         player.sendMessage("The player " + args[0] + " is not on the server.");
                     }
