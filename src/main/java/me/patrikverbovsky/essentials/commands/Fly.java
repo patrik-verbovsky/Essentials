@@ -17,7 +17,7 @@ public class Fly implements CommandExecutor {
                 player.sendMessage("Set flying to Enabled");
             }
         } else {
-            sender.sendMessage("You need to be a player to use this command.");
+            sender.sendMessage(ChatColor.RED + "You need to be a player to use this command.");
             return true;
         } return false;
     }

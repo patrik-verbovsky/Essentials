@@ -1,5 +1,6 @@
 package me.patrikverbovsky.essentials.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,7 +14,7 @@ public class Creative implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("essentials.gmc")) {
                 player.setGameMode(GameMode.CREATIVE);
-                player.sendMessage("Set gamemode to Creative Mode");
+                player.sendMessage(ChatColor.RED + "Set gamemode to Creative Mode");
             } return true;
         } return false;
     }

@@ -30,7 +30,7 @@ public class Teleport implements CommandExecutor {
                     try {
                         playerToSend.teleport(target.getLocation());
                     } catch (NullPointerException e) {
-                        player.sendMessage("Player not found.");
+                        player.sendMessage(ChatColor.RED + "Player not found.");
                     }
                 }
             }

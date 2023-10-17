@@ -31,10 +31,10 @@ public class Heal implements CommandExecutor {
                     player.sendMessage("Use /heal <player>.");
                 }
             } else {
-                player.sendMessage( "You don't have the permission for this command.");
+                player.sendMessage( ChatColor.RED + "You don't have the permission for this command.");
             }
         } else {
-            sender.sendMessage("You can only use this command as a player.");
+            sender.sendMessage(ChatColor.RED + "You can only use this command as a player.");
         } return false;
     }
 }
