@@ -1,7 +1,2 @@
-# Essentials
-This plugin adds some commands to Minecraft, such as:
-  - Fly
-  - Heal
-  - Teleport
-
-Supports 1.20.x
+# ⚠️ This project has been discontinued!
+This won't have new commands, and be updated to future versions. Please use alternatives, like EssentialsX.
